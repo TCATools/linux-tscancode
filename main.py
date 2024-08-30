@@ -121,13 +121,13 @@ def run_tsc_cpp(input, output):
 
 
 def run_tsc_csharp(input, output):
-    cmd = "cd {} && ./TscLua/tsccs --xml '{}' 2>'{}'".format(WKDIR, input, output)
+    cmd = "cd {} && ./TscSharp/TscSharp --xml '{}' 2>'{}'".format(WKDIR, input, output)
     print(cmd)
     return os.system(cmd)
 
 
 def run_tsc_lua(input, output):
-    cmd = "cd {} && ./TscSharp/tsclua --xml '{}' 2>'{}'".format(WKDIR, input, output)
+    cmd = "cd {} && ./TscLua/tsclua --xml '{}' 2>'{}'".format(WKDIR, input, output)
     print(cmd)
     return os.system(cmd)
 
