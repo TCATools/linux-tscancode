@@ -167,6 +167,7 @@ class CmdInfo:
 
 def main(argv):
     cmd_info = CmdInfo()
+    cmd_info.Parse(argv)
     input = InputInfo()
     input.parse_input()
     result_path = ""
