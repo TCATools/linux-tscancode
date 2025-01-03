@@ -191,8 +191,9 @@ def main(argv):
     if not os.path.exists(result_path):
         print("工具执行错误未生成result")
     else:
-        result_tree = ET.parse(result_path)
-        root = result_tree.getroot()
+        text = open(result_path).read()
+        text = re.sub(u"[\x00-\x08\x0b\x0c\x0e-\x1F\uD800-\uDFFF\uFFFE\uFFFF]+" ,u"",text)
+        root = ET.fromstring(text)
         for error in root:
             error_attr = error.attrib
             path = error_attr["file"]
