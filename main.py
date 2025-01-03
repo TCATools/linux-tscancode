@@ -6,6 +6,7 @@ import json
 import xml.etree.ElementTree as ET
 import sys
 import os
+import re
 
 
 WKFILE = os.path.realpath(__file__)
